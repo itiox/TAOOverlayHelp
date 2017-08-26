@@ -65,8 +65,8 @@
     NSLayoutConstraint* centerX = [NSLayoutConstraint constraintWithItem:self.textLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
     NSLayoutConstraint* marginLeft = [NSLayoutConstraint constraintWithItem:self.textLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1 constant:30];
     NSLayoutConstraint* marginRight = [NSLayoutConstraint constraintWithItem:self.textLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationLessThanOrEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1 constant:-30];
-    [self addConstraints:@[centerX, centerY, marginLeft, marginRight]];
-    
+    [NSLayoutConstraint activate:@[centerX, centerY, marginLeft, marginRight]];
+  
     [super updateConstraints];
 }
 + (BOOL)requiresConstraintBasedLayout {
